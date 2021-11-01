@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+
+
+{% block Css %}
+<style>
+  body {
+    background-color: #cccccc;
+  }
+</style>
+
+{% endblock Css %}
+
+
+{% block title %} Membership {% endblock title%}
+
+{% block body%}
+
+
+<!--  New User -->
+
+<section class="fdb-block">
+  <div class="container">
+    <div class="row justify-content-center py-5">
+      <div class="col-12 col-md-8 col-lg-7 col-xl-5 text-center">
+        <div class="fdb-box">
+          <div class="row">
+            <div class="col">
+              {% if message %}
+              <div class="alert alert-danger" role="alert">
+                {{message}}
+              </div>
+              <hr>
+              {% endif %}
+              <!-- <p>lorem1000</p> -->
+              <h1>Membership 2021 - 2022</h1>
+              <!-- <p>Addmission Fees is <b>{{content["Addmission_fees"]}}</b></p> -->
+            </div>
+          </div>
+          <form action="/add_member" method="post">
+            <div class="row mt-4">
+              <div class="col">
+                <input type="text" class="form-control" name="f_name" placeholder="First Name" required>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col">
+                <input type="text" class="form-control" name="l_name" placeholder="Last Name" required>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col">
+                <input type="email" class="form-control" name="email" placeholder="E-mail" required>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col">
+                <input type="text" class="form-control" name="contact_number" placeholder="Contact Number" required>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col">
+                <input type="text" class="form-control" name="AddharNumber" id="txtAadhar" onblur="AadharValidate();"
+                  placeholder="AddharCard Number" required />
+              </div>
+            </div>
+            <div class="row mt-4 text-right">
+              <div class="col">
+                <input class="form-check-input" type="radio" name="Gender" value="male" required>
+                <label class="form-check-label" for="Male">
+                  Male
+                </label>
+                <input class="form-check-input" type="radio" name="Gender" value="female" required>
+                <label class="form-check-label" for="Female">
+                  Female
+                </label>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col">
+                <!-- <input class="form-check-input" type="radio" name="cash_paid" value="cash" id="flexCheckChecked"
+                  required>
+                <label class="form-check-label" for="flexCheckChecked">
+                  Paid Cash
+                </label>
+                <input class="form-check-input" type="radio" name="cash_paid" value="online" id="flexCheckChecked"
+                  required>
+                <label class="form-check-label" for="flexCheckChecked">
+                  Paid Online
+                </label> -->
+              </div>
+            </div>
+
+            <div class="row mt-4">
+              <div class="col">
+                <button class="btn btn-outline-secondary" type="submit">Add Member</button>
+              </div>
+            </div>
+          </form>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% endblock body %}
+
+
+<!-- $(window).on("scroll", function () {
+  if ($(window).scrollTop() < 0) {
+    $("#footer").addClass("fixed-bottom");
+  } else {
+    //remove the background property so it comes transparent again (defined in your css)
+    $("#footer").removeClass("fixed-bottom");
+  }
+}); -->
+
+
+
+<!-- js -->
+{% block js %}
+<script>
+  document.getElementById("footer").classList.add("fixed-bottom")
+
+  
+   
+
+  //Addhar Card
+  function AadharValidate() {
+    var aadhar = document.getElementById("txtAadhar").value;
+    var adharcardTwelveDigit = /^\d{12}$/;
+    var adharSixteenDigit = /^\d{16}$/;
+    if (aadhar != '') {
+      if (aadhar.match(adharcardTwelveDigit)) {
+        return true;
+      }
+      else if (aadhar.match(adharSixteenDigit)) {
+        return true;
+      }
+      else {
+        alert("Enter valid Aadhar Number");
+        return false;
+      }
+    }
+  }
+</script>
+
+{% endblock js %}

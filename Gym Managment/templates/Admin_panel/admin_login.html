@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+
+{% block Css %}  
+<style>
+
+    body{
+          background-color:#cccccc;
+     }
+     
+</style>
+
+{% endblock Css  %}
+
+
+{% block title %}Team{% endblock title%}
+
+{% block body%}
+
+<section class="fdb-block my-5 " >
+     <div class="container py-5">
+       <div class="row justify-content-center">
+         <div class="col-12 col-md-8 col-lg-7 col-xl-5 text-center">
+           <div class="fdb-box">
+             <div class="row">
+               <div class="col">
+                 <p>{{msg}}</p>
+                 <h1>Admin Login</h1>
+               </div>
+             </div>
+             <form action="/admin" method="post">
+             <div class="row mt-4">
+               <div class="col">
+                 <input type="text" class="form-control" placeholder="Username" name="username">
+               </div>
+             </div>
+             <div class="row mt-4">
+               <div class="col">
+                 <input type="password" class="form-control mb-1" placeholder="Password" name="passwd">
+               </div>
+             </div>
+             <div class="row mt-4">
+               <div class="col">
+                 <button class="btn btn-dark" type="submit">Submit</button>
+               </div>
+               </form>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </section>
+
+{% endblock body %}
+
+
+
+<!-- js -->
+{% block js %}
+   <script>
+        document.getElementById("footer").classList.add("fixed-bottom")
+   </script>
+    
+    {% endblock js %}

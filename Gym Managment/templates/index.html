@@ -1,0 +1,228 @@
+{% extends "base.html" %}
+
+{% block title %} Home {% endblock title%}
+
+{% block body%}
+
+ <!--Carousel-->
+ <div id="carouselExampleControls" class="carousel slide mx-0" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{ url_for('static', filename='images/carousle_1.png') }}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block pb-5">
+        <h5 class="pb-5">‘Success usually comes to those who are too busy to be looking for it.’</h5>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{{ url_for('static', filename='images/carousle_2.png') }}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block pb-5">
+        <h5 class="pb-5">‘The clock is ticking. Are you becoming the person you want to be?’</h5>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{{ url_for('static', filename='images/carousle_3.png') }}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block pb-5">
+        <h5 class="pb-5">‘Whether you think you can, or you think you can’t, you’re right.’</h5>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{{ url_for('static', filename='images/carousle_4.png') }}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block pb-5">
+        <h5 class="pb-5">‘Things may come to those who wait, but only the things left by those who hustle.’</h5>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{{ url_for('static', filename='images/carousle_5.png') }}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block pb-5">
+        <h5 class="pb-5">‘All our dreams can come true if we have the courage to pursue them.’</h5>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{{ url_for('static', filename='images/carousle_6.png') }}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block pb-5">
+        <h5 class="pb-5">‘A champion is someone who gets up when they can’t.’</h5>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{{ url_for('static', filename='images/carousle_7.png') }}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block pb-5">
+        <h5 class="pb-5">‘If you think lifting is dangerous, try being weak. Being weak is dangerous.’</h5>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+
+
+<section class="mbr-section article" id="msg-box3-21" style="background-color: rgb(242, 242, 242); padding-top: 120px; padding-bottom: 120px;">
+
+
+  <div class="container">
+      <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-xs-center">
+              <h3 class="mbr-section-title display-2">WHAT WE DO</h3>
+              <div class="lead"><p class="">We want to help you live a fit and healthy lifestyle! We do this by helping you find the most suitable equipment for your home gym, studio or commercial gym, keeping your budget, lifestyle and fitness goals in mind. We stock a wide range of gym equipment, with strength equipment, cardio, cross training and so much more. Our awesome team is always keen to help, so please call us to discuss your needs.</p></div>
+              <div>
+                <!-- <a class="btn btn-danger" href="https://mobirise.com">SEE ALL TEMPLATES</a></div> -->
+          </div>
+      </div>
+  </div>
+
+</section>
+
+
+
+<section class="fdb-block py-5 bg-dark text-light">
+<div class="container">
+  <div class="row align-items-center">
+    <div class="col-12 col-md-6 mb-4 mb-md-0">
+      <img alt="image" class="img-fluid" src="{{ url_for('static', filename='images/About.png') }}">
+    </div>
+    <div class="col-12 col-md-6 col-lg-5 ml-md-auto text-left">
+      <h1>About us</h1>
+      <p class="lead">At Gym and Fitness, we believe that building a positive culture is incredibly important. The business is underpinned by six core values which speak of our commitment to our customers, staff, the industry and our business as a whole. We believe in encouraging, supporting, challenging, learning and growing to be the best. At Gym and Fitness, every morsel of feedback is a nugget of shiny gold because it gives us the opportunity to provide the best customer experience.</p>
+      <p>
+        <!-- <a class="btn btn-secondary mt-4" href="https://www.froala.com">Download</a></p> -->
+    </div>
+  </div>
+</div>
+</section>
+</section>
+
+
+<section class="fdb-block" style="background-color: #cccccc; padding-top: 120px; padding-bottom: 120px;">
+<div class="container">
+  <div class="row text-left">
+    <div class="col-12 col-md-6">
+      <!-- <img alt="image" class="fdb-icon" src="./imgs/icons/gift.svg"> -->
+      <i class="fas fa-dumbbell"></i>
+      <h3><strong>Customer Service</strong></h3>
+      <p class="lead">At Gym and Fitness, customers are at the centre of what we do and why we do it! We have a team of knowledgeable sales representatives who are ready to assist you with your gym equipment needs. Our crew will be able to answer your questions from honest product information to the best way to integrate a piece of equipment into your workout routine. We work hard to ensure we have strong relationships with our suppliers, bringing you the best possible prices in the industry. In fact, if you find a better price on one of our core range of products, we will match it as a part of our brand promises.</p>
+    </div>
+    <div class="col-12 col-md-6 pt-5 pt-md-0">
+      <!-- <img alt="image" class="fdb-icon" src="./imgs/icons/cloud.svg"> -->
+      <!-- <i class="fas fa-dumbbell"></i> -->
+      <i class="fas fa-users"></i>
+
+      <h3><strong>Our Team</strong></h3>
+      <p class="lead">Here at Gym and Fitness, we have a team of approximately forty awesome superstars and we owe our success to each and every one of them! Because we hire for culture first and foremost, we have some pretty awesome people working with us who hustle everyday to give you a positive customer experience. You can find them in areas such as sales, marketing and ecommerce, customer service, warehousing, finance, human resources and management. If you think you’re kind of a big deal and interested in joining our team, please send us an email with your resume and a little bit about yourself.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+
+
+
+<section class="fdb-block py-5 bg-dark text-light" >
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col col-md-8 text-center">
+      <i class="fas fa-heartbeat fa-2x"></i>
+      <!-- <i class="fas fa-dumbbell fa-2x"></i> -->
+
+      <!-- <p class="lead">If you think lifting is dangerous, try being weak. Being weak is dangerous.</p> -->
+      <p class="lead">A healthy gymnastic body not only reflects a great personality but it also makes you stronger and keep fit. Gym activities keep you away from laziness makes you active and energetic whole day and enables you to perform various tasks. One of the most common mental benefits of exercise is stress relief.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+
+
+
+
+
+
+<section class="fdb-block py-5" style="background-color: #cccccc; padding-top: 120px;" >
+<div class="container">
+  <div class="row text-center">
+    <div class="col-12">
+      <h1>There is a feature for everyone</h1>
+      <!-- <p class="lead"><a href="https://www.froala.com">See all features <i class="fas fa-angle-right"></i></a>
+      </p> -->
+    </div>
+  </div>
+
+  <div class="row text-center justify-content-center mt-5">
+    <div class="col-10 col-sm-3">
+      <img alt="image" class="img-fluid rounded" src="{{ url_for('static', filename='images/f-1.png') }}">
+      <h3><strong>Feature One</strong></h3>
+    </div>
+    <div class="col-10 col-sm-3 pt-5 pt-sm-0">
+      <img alt="image" class="img-fluid rounded" src="{{ url_for('static', filename='images/f-2.png') }}">
+      <h3><strong>Feature Two</strong></h3>
+    </div>
+
+    <div class="col-10 col-sm-3 pt-5 pt-sm-0">
+      <img alt="image" class="img-fluid rounded" src="{{ url_for('static', filename='images/f-3.png') }}">
+      <h3><strong>Feature Three</strong></h3>
+    </div>
+
+    <div class="col-10 col-sm-3 pt-5 pt-sm-0">
+      <img alt="image" class="img-fluid rounded" src="{{ url_for('static', filename='images/f-4.png') }}">
+      <h3><strong>Feature Four</strong></h3>
+    </div>
+  </div>
+</div>
+</section>
+
+
+
+<!-- Plans Pricing -->
+<section class="fdb-block pricing_css text-light py-5  ">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col">
+        <h1>Pricing Plans</h1>
+      </div>
+    </div>
+
+    <div class="row mt-5 align-items-top pb-5">
+      <div class="col-12 col-sm-10 col-md-6 col-lg-5 m-auto col-xl-3 text-left pricing_bronze_css text-light rounded">
+        <div class="bg-gray p-3 text-center rounded sl-1">
+          <h2 class="font-weight-light">Only Gym</h2>
+          <p class="">start with <b>{{content["only_gym_3_months"]}}</b></p>
+          <p class="text-center"><a href="/pricing" class="btn btn-dark">See more</a></p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-10 col-md-6 col-lg-5 m-auto col-xl-3 text-left pricing_gold_css text-light rounded">
+        <div class="bg-gray p-3 text-center rounded sl-1">
+          <h2 class="font-weight-light">Only Cardio</h2>
+          <p class="">start with <b>{{content["only_cardio_3_months"]}}</b></p>
+          <p class="text-center"><a href="/pricing" class="btn btn-dark">See more</a></p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-10 col-md-6 col-lg-5 m-auto col-xl-3 text-left pricing_silver_css text-light rounded">
+        <div class="bg-gray p-3 text-center rounded sl-1">
+          <h2 class="font-weight-light">Gym & Cardio </h2>
+          <p class="">start with <b>{{content["gym_cardio_3_months"]}}</b></p>
+          <p class="text-center"><a href="/pricing" class="btn btn-dark">See More</a></p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-10 col-md-6 col-lg-5 m-auto col-xl-3 text-left pricing_forth_css text-light rounded">
+        <div class="bg-gray p-3 text-center rounded sl-1">
+          <h2 class="font-weight-light">Personal Training</h2>
+          <p class="">start with <b>{{content["personal_training_3_months"]}}</b></p>
+          <p class="text-center"><a href="/pricing" class="btn btn-dark">See More</a></p>
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+</section>
+
+
+
+{% endblock body%}

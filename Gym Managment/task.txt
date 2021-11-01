@@ -1,0 +1,37 @@
+1) create GUI
+2) Admin Pannl
+3) palnse
+4) Admision
+5) payment gateway
+
+
+TARUS
+
+
+Prosess :- User will come to the website and check the Plans, And Select the Plans if user is new a registretion form will user have  to fill after that user can pay the Admission Fees to the Gym/ or User is Allready membere of the GYM to user will new there Unique no which is conected the their Addhar no !
+
+
+
+contact db:
+srno 
+name 
+phonenum
+message
+date_time
+
+
+
+
+--------------------------------------------------------------------------
+
+new USer Have to fill
+
+First_name
+Last_name
+Gender 
+emailid
+phone number
+Addhar card no
+Address
+plan + Addmission Fees
+

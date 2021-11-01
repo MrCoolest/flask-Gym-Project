@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+
+{% block Css %}
+<style>
+  body {
+    background-color: #cccccc;
+  }
+</style>
+
+{% endblock Css %}
+
+
+{% block title %}Plans{% endblock title%}
+
+{% block body%}
+
+<!-- Only Gym -->
+{% for pre_key , pre_value in fess.items() %}
+<section class="container mt-4 ">
+  <div class="text-center mb-4 ">
+    <h1 class="text-dark">{{pre_key}}</h1>
+  </div>
+  <table class="table table-dark table-striped">
+    {% for key, value in pre_value.items() %}
+    <tr>
+      <td><b> {{key}} </b></td>
+      <td><b> {{value}} </b></td>
+      <td><a href='/buy/{{key}}/{{value}}' class="btn btn-outline-warning">buy</a> </td>
+    </tr>
+
+    {% endfor %}
+
+  </table>
+</section>
+{% endfor %}
+
+
+{% endblock body %}
+
+
+{% block js %}
+<script>
+
+
+</script>
+{% endblock js %}

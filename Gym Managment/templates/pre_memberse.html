@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+
+{% block Css %}
+<style>
+  body {
+    background-color: #cccccc;
+  }
+</style>
+
+{% endblock Css %}
+
+
+{% block title %} plan selection {% endblock title%}
+
+{% block body%}
+
+<!-- Login page -->
+<section class="fdb-block py-5">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-7 col-xl-5 text-center">
+        <div class="fdb-box">
+          
+          <div class="row">
+            <div class="col">
+
+              {% if message %}
+              {% for key , value in message.items() %}
+            <div class="alert {{key}}" role="alert">
+              {{value}}
+            </div>
+            <hr>
+            {% endfor %}
+            {% endif %}
+
+             
+              <h1>Login </h1>
+            </div>
+          </div>
+          <form action="/Just_buy" method="post">
+            <div class="row mt-4">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Email" name="email_id" required>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col">
+                <input type="password" class="form-control mb-1" placeholder="Unique Code" name="unique_id" maxlength="4" required> 
+              </div>
+              <div class="col">
+                <!-- <input type="password" class="form-control mb-1" placeholder="Unique Code"> -->
+                <select class="form-select" aria-label="Default select example" name="Plan_info" required>
+                  <option value="">select Plan</option>
+                  {% for pre_key, pre_value in fess.items()%}
+                    <optgroup label="{{pre_key}}">
+                    {% for key, value in pre_value.items()%}
+                    <option value="{{pre_key}} | {{key}} | {{value}}">{{key}}</option>
+                    {% endfor %}
+                    </optgroup>
+                {% endfor %}
+                </select>
+
+              </div>
+              <p class="text-right">In Case You Forget Your Unique Code Contact to the Gym!</p>
+            </div>
+            <div class="row mt-4">
+              <div class="col">
+                <button class="btn btn-outline-secondary" type="submit">Pay Now</button>
+
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock body %}
+<!-- js -->
+{% block js %}
+<script>
+  document.getElementById("footer").classList.add("fixed-bottom")
+</script>
+
+{% endblock js %}

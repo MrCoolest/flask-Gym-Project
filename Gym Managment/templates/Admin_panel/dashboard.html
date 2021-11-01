@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+
+
+{% block Css %}  
+<style>
+
+    body{
+          background-color:#cccccc;
+     }
+     
+</style>
+
+{% endblock Css  %}
+
+
+{% block title %}Dashboard{% endblock title%}
+
+{% block body %}
+     <!--Memberse Database Data -->
+<section class="container mt-4 ">
+
+     <div class="text-center mb-4 ">
+          <h1 class="text-dark">Only Gym</h1>
+     </div>
+     <table class="table  table-striped">
+          <tr class="table-dark">
+               <th>Sr_no</th>
+               <th>Name</th>
+               <th>Contact No</th>
+               <th>Fitness Plan</th>
+               <th>Active</th>
+               <th>View</th>
+          </tr>
+
+          {% for row in members %}
+          <tr class="table-dark">
+               <td> {{row.Sr_no}} </td>
+
+               <td>{{row.F_name}} {{row.L_name}}</td>
+
+               <td>{{row.Contact_number}}</td>
+
+               <td>{{row.Fitness_Plan}}</td>
+
+               <td>{% if row.active == True %} Yes {% else %} No {% endif %}</td>
+
+               
+
+               <td>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal{{row.Sr_no}}">
+                         View
+                         
+                       </button>
+
+                       
+                    
+                    
+                       
+               </td>
+          </tr>
+
+          <div class="modal" id="myModal{{row.Sr_no}}">
+               <div class="modal-dialog modal-dialog-centered">
+                 <div class="modal-content">
+             
+                   <!-- Modal Header -->
+                   <div class="modal-header">
+                     <h4 class="modal-title " > ({{row.Sr_no}}) {{row.F_name}} {{row.L_name}}</h4>
+                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                   </div>
+             
+                   <!-- Modal body -->
+                   <div class="modal-body">
+                    <p>Gneder :- <span>{{row.gender}}</span></p> 
+                    <hr>
+                    <p>Contact No :- <span>{{row.Contact_number}}</span></p>
+                    <hr>
+
+                    <p>Email-Id :- <span>{{row.Email_id}}</span></p>
+                    <hr>
+
+                    <p>Adddhar No :- <span>{{row.Addharcard}}</span></p>
+                    <hr>
+
+                    <p>Active :- <span>{% if row.active == True %} Yes {% else %} No {% endif %}</span></p>
+                    <hr>
+
+                    <p>Fitness Plan :- <span>{{row.Fitness_Plan}}</span></p>
+                    <hr>
+
+                    <p>Date Time :- <span>{{row.Date_time}}</span></p>
+                    <hr>
+
+                    <p>Unique ID :- <span>{{row.unique_ID}}</span></p>
+                   </div>
+             
+                   <!-- Modal footer -->
+                   <div class="modal-footer">
+                        <a href="/Details_edit/{{row.Sr_no}}" class="btn btn-primary">Edit</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <!-- <a href="/" class="btn btn-danger">Delete</a> -->
+                   </div>
+             
+                 </div>
+               </div>
+             </div>
+                     
+       
+          {% endfor %}
+
+     </table>
+</section>
+
+ 
+
+
+{% endblock body %}
+
+
+
+<!-- js -->
+{% block js %}
+   <script>
+        document.getElementById("footer").classList.add("fixed-bottom")
+
+        //adding Logout button
+        //document.getElementById("logout_btn").innerHTML = '<a href="/logout" class="btn btn-dark">'
+   </script>
+    
+    {% endblock js %}
+

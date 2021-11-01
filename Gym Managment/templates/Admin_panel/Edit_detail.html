@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+
+{% block Css %}
+<style>
+  body {
+    background-color: #cccccc;
+  }
+</style>
+
+{% endblock Css %}
+
+
+{% block title %} Membership {% endblock title%}
+
+{% block body%}
+<section>
+  <div class="container py-5" >
+<form action="/Details_edit/{{member.Sr_no}}" method="post">
+  <div class="mb-3">
+    <label for="F_name" class="form-label">First Name</label>
+    <input type="text" name="F_name" class="form-control" id="F_name" value="{{member.F_name}}" required>
+  </div>
+  <div class="mb-3">
+    <label for="L_name" class="form-label">Last Name</label>
+    <input type="text" name="L_name" class="form-control" id="L_name" value="{{member.L_name}}" required>
+  </div>
+  <div class="mb-3">
+    <label for="email_id" class="form-label">Email</label>
+    <input type="email" class="form-control" name='Email_id' id="email_id" value="{{member.Email_id}}" required>
+  </div>
+  <div class="mb-3">
+    <label for="Contact_no" class="form-label">Contact No</label>
+    <input type="text" class="form-control" name="contact" id="Contact_no" value="{{member.Contact_number}}" required>
+  </div>
+
+ 
+  
+  <!-- <div class="mb-3 form-check">
+    <input type="checkbox" name="activation" class="form-check-input" id="exampleCheck1" {% if member.active == True %} checked {% endif %}>
+    <label class="form-check-label" for="exampleCheck1">Active or not</label>
+  </div> -->
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+</section>
+
+{% endblock body %}
+
+
+<!-- js -->
+{% block js %}
+<script>
+  document.getElementById("footer").classList.add("fixed-bottom")
+
+  
+</script>
+
+{% endblock js %}

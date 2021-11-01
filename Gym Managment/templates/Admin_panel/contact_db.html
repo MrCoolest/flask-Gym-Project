@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+
+{% block Css %}
+<style>
+     body {
+          background-color: #cccccc;
+     }
+</style>
+
+
+{% endblock Css %}
+
+
+{% block title %}DataBase{% endblock title%}
+
+{% block body%}
+<!-- Contact Database Data -->
+<section class="container mt-4 ">
+
+     <div class="text-center mb-4 ">
+          <h1 class="text-dark">Only Gym</h1>
+     </div>
+     <table class="table table-dark table-striped">
+          <tr class>
+               <th>Sr_no</th>
+               <th>Name</th>
+               <th>Phone_number</th>
+               <th>Message</th>
+               <th>Date_time</th>
+               <th>Delete</th>
+          </tr>
+
+          {% for row in contacts_data %}
+          <tr>
+               <td>{{row.Sno}}</td>
+               <td>{{row.Name}}</td>
+               <td>{{row.Phone_number}}</td>
+               <td>{{row.Message}}</td>
+               <td>{{row.Date_time}}</td>
+               <td><a href="/delete/{{row.Sno}}" class="btn btn-danger">Delete</a></td>
+          </tr>
+          {% endfor %}
+
+     </table>
+</section>
+
+
+
+{% endblock body %}
+
+
+
+<!-- js -->
+{% block js %}
+<script>
+     document.getElementById("footer").classList.add("fixed-bottom")
+</script>
+
+{% endblock js %}

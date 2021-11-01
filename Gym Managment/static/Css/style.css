@@ -1,0 +1,39 @@
+.logo{
+    text-decoration: none;    
+}
+
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Plan Priceing Css $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+
+.pricing_css{
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+}
+
+.pricing_gold_css{
+    
+    background-color: #ffeaa7;
+background-image: linear-gradient(315deg, #ffeaa7 0%, #000000 74%);
+}
+
+.pricing_silver_css{
+   
+    background-color: #55efc4;
+    background-image: linear-gradient(315deg, #55efc4 0%, #000000 74%);
+}
+
+.pricing_forth_css{
+  
+    background-color: #000000;
+background-image: linear-gradient(315deg, #04619f 0%, #000000 74%);
+}
+
+.pricing_bronze_css{
+    background-color: #166d3b;
+    background-image: linear-gradient(315deg, #166d3b 0%, #000000 74%);
+}
+
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$   Contact Css $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+
+.contact-bg{
+    background-color: #E5E5E5;
+}

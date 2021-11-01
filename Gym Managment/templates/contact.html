@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+
+{% block Css %}
+<style>
+     body {
+          background-color: #cccccc;
+     }
+</style>
+
+
+{% endblock Css %}
+
+
+{% block title %}Contact{% endblock title%}
+
+{% block body%}
+
+
+
+
+<!-- Contact form -->
+
+<section class=" py-4">
+     <div class="container  py-5">
+          <div class="row">
+               <div class="col-md-5 mr-auto">
+                    <h2>Contact Us</h2>
+                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste quaerat autem
+                         corrupti asperiores accusantium et fuga! Facere excepturi, quo eos, nobis doloremque dolor
+                         labore expedita illum iusto, aut repellat fuga!</p>
+                    <ul class="list-unstyled pl-md-5 mb-5">
+                         <li class="d-flex text-black mb-2">
+                              <span class="mr-3"><span class="icon-map"></span></span> 34 Street Name, City Name Here,
+                              <br> United States
+                         </li>
+                         <li class="d-flex text-black mb-2"><span class="mr-3"><span class="icon-phone"></span></span>
+                              +1 (222) 345 6789</li>
+                    </ul>
+               </div>
+               <div class="col-md-6">
+                    <div id="form-message-warning mt-4"></div>
+                    <div id="form-message-success">
+                         {% if message %}
+                         <div class="alert alert-primary" role="alert">
+                              {{message}}
+                         </div>
+                         {% endif %}
+                    </div>
+                    <form class="mb-5" action="/contact" method="post">
+                         <div class="row">
+                              <div class="col-md-12 form-group">
+                                   <label for="name" class="col-form-label">Name</label>
+                                   <input type="text" class="form-control" name="name"  required>
+                              </div>
+                         </div>
+                         <div class="row">
+                              <div class="col-md-12 form-group">
+                                   <label for="num" class="col-form-label">Phone number</label>
+                                   <input type="text" class="form-control" name="num" required>
+                              </div>
+                         </div>
+                         <div class="row">
+                              <div class="col-md-12 form-group">
+                                   <label for="message" class="col-form-label">Message</label>
+                                   <textarea class="form-control" name="message" id="message" cols="30"
+                                        rows="7" required></textarea>
+                              </div>
+                         </div>
+                         <div class="row pt-1">
+                              <div class="col-md-12">
+                                   <input type="submit" value="Send Message"
+                                        class="btn btn-primary rounded-0 py-2 px-4">
+                                   <!-- <span class="submitting"></span> -->
+                              </div>
+                         </div>
+                    </form>
+               </div>
+          </div>
+     </div>
+</section>
+{% endblock body %}
+
+
+
+<!-- js -->
+{% block js %}
+<script>
+     document.getElementById("footer").classList.add("fixed-bottom")
+</script>
+
+{% endblock js %}
