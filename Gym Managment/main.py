@@ -6,7 +6,7 @@ from datetime import datetime
 from flask_mail import Mail, Message
 import json
 import os
-from apscheduler.schedulers.blocking import BlockingScheduler
+# from apscheduler.schedulers.blocking import BlockingScheduler
 import random
 
 
@@ -135,10 +135,7 @@ def admin():
 
 
 
-@app.route('/buy/<plan_name>/<int:price>')
-def buy_plans(plan_name, price):
 
-    return render_template('pre_memberse.html')
 
 
 
@@ -151,16 +148,15 @@ def just_buy_plans():
         plan = request.form.get('Plan_info')
 
         user = New_user.query.filter_by(Email_id = email_id).first()
-        Checking_unique_id  =user.unique_ID == unique_id 
-        check_fitness_plan = user.Fitness_Plan
-        print(check_fitness_plan, user , Checking_unique_id)
-        # print(user.posts)
-        if user is not None and Checking_unique_id == True:
-            if check_fitness_plan == None:
-                user.Fitness_Plan = plan
-                user.active = True
-                db.session.commit()
-                # user.add(Fitness_Plan = plan)
+        
+        if user is not None :
+            Checking_unique_id  = user.unique_ID == unique_id 
+            check_fitness_plan = user.Fitness_Plan
+            if Checking_unique_id == True:
+                if check_fitness_plan == None:
+                    user.Fitness_Plan = plan
+                    user.active = True
+                    db.session.commit()
 
                 return render_template('pre_memberse.html', message = { 'alert-primary' : "Your Plan is Activated !!!" })
             else:
